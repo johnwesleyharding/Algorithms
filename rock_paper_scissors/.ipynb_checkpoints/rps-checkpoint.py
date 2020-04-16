@@ -4,7 +4,7 @@ import sys
 
 def rock_paper_scissors(n):
     
-    return [[['rock', 'paper', 'scissors'][i // 3 ** ((n - 1) - j) % 3] for j in range(n)] for i in range(3 ** n)]
+    return [[['rock', 'paper', 'scissors'][i // 3 ** (n - j - 1) % 3] for j in range(n)] for i in range(3 ** n)]
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
